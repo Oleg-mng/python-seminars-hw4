@@ -9,6 +9,8 @@ def numbers_in_list(list):
     for i in list:
         if i.isdigit() == True:
             sum_numbers_1.append(i)
+        if i == '2':
+            sum_numbers_1.remove(i)
     print(sum_numbers_1)
     return sum_numbers_1
 
