@@ -12,12 +12,11 @@ def numbers_in_list(list):
     print(sum_numbers_1)
     return sum_numbers_1
 
-
-# def sum_of_lists(list1, list2):
-#     sum_of_lists_1 = []
-#     for i in list1:
-#         sum_of_lists_1=list1+list2
-
+def sum_of_lists(list1, list2):
+    sum_of_lists_sum = []
+    for i in range(len(list1)):
+        sum_of_lists_sum.append(int(list1[i])+int(list2[i]))
+    return sum_of_lists_sum
 
 with open('file20.txt', 'w') as data:
     data.write('3*x^2+7*x+9')
@@ -35,7 +34,10 @@ with open('file20.1.txt', 'r') as f:
 # numbers_in_list(poly_1)
 # numbers_in_list(poly_2)
 
-c = [x+y for x, y in zip(numbers_in_list(poly_1), numbers_in_list(poly_2))]
+# c = [x+y for x, y in zip(numbers_in_list(poly_1), numbers_in_list(poly_2))]
+# print(c)
+
+c=sum_of_lists(numbers_in_list(poly_1), numbers_in_list(poly_2))
 print(c)
 
 mylist=[]
@@ -51,7 +53,7 @@ for i in mylist:
     l=i,m
     l = ''.join(map(str, l))
     m-=1
-    print(l)
+    # print(l)
     mylist_all.append(l)
 print('+'.join(map(str, mylist_all)))
 q='+'.join(map(str, mylist_all))
