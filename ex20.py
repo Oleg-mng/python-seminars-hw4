@@ -44,9 +44,9 @@ mylist=[]
 for i in c:
     b = i, 'x^',
     b = ''.join(map(str, b))
-    print(b)
+    # print(b)
     mylist.append(b)
-print(mylist.reverse())
+# print(mylist.reverse())
 m=2
 mylist_all=[]
 for i in mylist:
