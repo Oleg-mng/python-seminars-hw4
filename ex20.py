@@ -11,7 +11,7 @@ def numbers_in_list(list):
             sum_numbers_1.append(i)
     print(sum_numbers_1)
     return sum_numbers_1
-    
+
 
 # def sum_of_lists(list1, list2):
 #     sum_of_lists_1 = []
@@ -32,29 +32,51 @@ with open('file20.1.txt', 'r') as f:
     poly_2 = f.read()
     print(poly_2)
 
-numbers_in_list(poly_1)
-numbers_in_list(poly_2)
+# numbers_in_list(poly_1)
+# numbers_in_list(poly_2)
 
-# print(poly_1.split('+'))
-# print(poly_2.split('+'))
+c = [x+y for x, y in zip(numbers_in_list(poly_1), numbers_in_list(poly_2))]
+print(c)
 
-# print((map(int(poly_1))))
+mylist=[]
+for i in c:
+    b = i, 'x^',
+    b = ''.join(map(str, b))
+    print(b)
+    mylist.append(b)
+print(mylist.reverse())
+m=2
+mylist_all=[]
+for i in mylist:
+    l=i,m
+    l = ''.join(map(str, l))
+    m-=1
+    print(l)
+    mylist_all.append(l)
+print('+'.join(map(str, mylist_all)))
+q='+'.join(map(str, mylist_all))
+with open('file20.total.txt', 'w') as data:
+    data.write(q)
+# print(list(map(lambda: х, y: x+y, poly_1, poly_2)))
 
-# s = [s for s in str.split(poly_1) if s.isdigit()]
-# print(s)
-# print((poly_1.split('+'))+ (poly_2.split('+')))
+    # print(poly_1.split('+'))
+    # print(poly_2.split('+'))
 
+    # print((map(int(poly_1))))
 
-# sentence = 'Extract 100 , 100.45 and 10000 from this string'
-# s = [int(s) for s in str.split(poly_1) if s.isdigit()]
-# print(s)
+    # s = [s for s in str.split(poly_1) if s.isdigit()]
+    # print(s)
+    # print((poly_1.split('+'))+ (poly_2.split('+')))
 
-# import re
+    # sentence = 'Extract 100 , 100.45 and 10000 from this string'
+    # s = [int(s) for s in str.split(poly_1) if s.isdigit()]
+    # print(s)
 
-# res = re.split('\W+', poly_2)
-# print(res)
+    # import re
 
+    # res = re.split('\W+', poly_2)
+    # print(res)
 
-# sum_poly = poly_1+poly_2
-# print(sum_poly)
-# poly=Polynomial([11, 2, 2])
+    # sum_poly = poly_1+poly_2
+    # print(sum_poly)
+    # poly=Polynomial([11, 2, 2])
